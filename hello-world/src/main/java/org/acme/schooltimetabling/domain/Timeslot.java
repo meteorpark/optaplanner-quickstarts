@@ -1,8 +1,12 @@
 package org.acme.schooltimetabling.domain;
 
+import lombok.Getter;
+
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
+
+@Getter
 public class Timeslot {
 
     private DayOfWeek dayOfWeek;
@@ -23,21 +27,4 @@ public class Timeslot {
     public String toString() {
         return dayOfWeek + " " + startTime;
     }
-
-    // ************************************************************************
-    // Getters and setters
-    // ************************************************************************
-
-    public DayOfWeek getDayOfWeek() {
-        return dayOfWeek;
-    }
-
-    public LocalTime getStartTime() {
-        return startTime;
-    }
-
-    public LocalTime getEndTime() {
-        return endTime;
-    }
-
 }

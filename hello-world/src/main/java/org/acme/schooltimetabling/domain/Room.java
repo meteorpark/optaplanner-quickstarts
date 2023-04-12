@@ -1,5 +1,8 @@
 package org.acme.schooltimetabling.domain;
 
+import lombok.Getter;
+
+@Getter
 public class Room {
 
     private String name;
@@ -12,13 +15,4 @@ public class Room {
     public String toString() {
         return name;
     }
-
-    // ************************************************************************
-    // Getters and setters
-    // ************************************************************************
-
-    public String getName() {
-        return name;
-    }
-
 }

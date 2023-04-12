@@ -1,9 +1,13 @@
 package org.acme.schooltimetabling.domain;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.lookup.PlanningId;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
+@Getter
+@Setter
 @PlanningEntity
 public class Lesson {
 
@@ -40,41 +44,4 @@ public class Lesson {
     public String toString() {
         return subject + "(" + id + ")";
     }
-
-    // ************************************************************************
-    // Getters and setters
-    // ************************************************************************
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public String getTeacher() {
-        return teacher;
-    }
-
-    public String getStudentGroup() {
-        return studentGroup;
-    }
-
-    public Timeslot getTimeslot() {
-        return timeslot;
-    }
-
-    public void setTimeslot(Timeslot timeslot) {
-        this.timeslot = timeslot;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
 }

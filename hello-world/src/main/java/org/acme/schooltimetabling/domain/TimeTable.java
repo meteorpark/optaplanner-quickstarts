@@ -1,7 +1,6 @@
 package org.acme.schooltimetabling.domain;
 
-import java.util.List;
-
+import lombok.Getter;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
@@ -9,6 +8,9 @@ import org.optaplanner.core.api.domain.solution.ProblemFactCollectionProperty;
 import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 
+import java.util.List;
+
+@Getter
 @PlanningSolution
 public class TimeTable {
 
@@ -33,25 +35,4 @@ public class TimeTable {
         this.roomList = roomList;
         this.lessonList = lessonList;
     }
-
-    // ************************************************************************
-    // Getters and setters
-    // ************************************************************************
-
-    public List<Timeslot> getTimeslotList() {
-        return timeslotList;
-    }
-
-    public List<Room> getRoomList() {
-        return roomList;
-    }
-
-    public List<Lesson> getLessonList() {
-        return lessonList;
-    }
-
-    public HardSoftScore getScore() {
-        return score;
-    }
-
 }
