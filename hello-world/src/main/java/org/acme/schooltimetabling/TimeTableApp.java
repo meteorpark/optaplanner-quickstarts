@@ -1,14 +1,5 @@
 package org.acme.schooltimetabling;
 
-import java.time.DayOfWeek;
-import java.time.Duration;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.acme.schooltimetabling.domain.Lesson;
 import org.acme.schooltimetabling.domain.Room;
 import org.acme.schooltimetabling.domain.TimeTable;
@@ -20,11 +11,21 @@ import org.optaplanner.core.config.solver.SolverConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.DayOfWeek;
+import java.time.Duration;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class TimeTableApp {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TimeTableApp.class);
 
     public static void main(String[] args) {
+
         SolverFactory<TimeTable> solverFactory = SolverFactory.create(new SolverConfig()
                 .withSolutionClass(TimeTable.class)
                 .withEntityClasses(Lesson.class)
